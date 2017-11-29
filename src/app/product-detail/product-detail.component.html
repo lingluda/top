@@ -1,0 +1,34 @@
+<div class="thumbnail">
+  <div>
+  <img src="http://placehold.it/1130x320"></div>
+  <div>
+   <!-- <h4>{{product.id}}</h4>-->
+    <h4 class="pull-right">{{product1?.p_price}} 元</h4>
+    <h4>{{product1?.name}}</h4>
+    <p>{{product1?.p_desc}}</p>
+  </div>
+  <div>
+    <p class="pull-right">{{comments?.length}} 条评论</p>
+   <!-- <h4>{{comments.length}}</h4>-->
+    <!--<h4>{{comments.}}</h4>-->
+    <!--<p>{{product.id}}</p>-->
+    <div><app-stars [rating]="product1?.p_rating"></app-stars></div>
+  </div>
+</div>
+  <div >
+    <div class="well">
+      <div class="row" class="row" *ngFor="let comment of comments">
+
+
+        <span class="pull-right">{{comment.id}} 楼</span>
+        <app-stars [rating]="comment.rating"></app-stars>
+        <span>{{comment.user}}</span>
+        <span class="pull-right">{{comment.timestamp}}</span>
+        <p></p>
+        <p>{{comment.content}}</p>
+
+      </div>
+    </div>
+  </div>
+
+

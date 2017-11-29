@@ -1,0 +1,14 @@
+<div *ngFor="let product of product | async" class="col-sm-4 col-md-3 col-lg-2" [routerLink]="['/product',product.id]">
+  <div class="thumbnail">
+    <img [src]="imgUrl">
+    <div class="caption">
+      <h4 class="pull-right">{{product.p_price}} 元</h4>
+      <h4><a >{{product.name}}</a></h4>
+      <p class="pull-right">{{product.p_fatherId}}</p>
+      <p>{{product.p_desc}}</p>
+
+    </div>
+    <div><app-stars [rating]="product.p_rating"></app-stars></div>
+  </div>
+
+</div>
